@@ -1,0 +1,302 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Reset and basic styling ... */
+
+header {
+    background-color: #131313;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 3rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Add this */
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #a200ff; /* Match the dropdown background color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #a200ff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px; /* Add border radius for the bottom edge */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-content a {
+    color: #D1D8E0;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #2C3E50;
+}
+/* Auth buttons styles */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-button {
+    padding: 0.5rem 1rem;
+    background-color: #991dff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #46006e;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of your styles ... */
+
+/* ... existing styles ... */
+
+.hero {
+    background-image: url('7672043.jpg'); /* Replace 'path-to-your-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 22rem;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.hero h1 {
+    font-size: 4.3rem; /* Adjust the font size as needed */
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.btn {
+    display: inline-block;
+    background-color: #5a1270;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #991dff;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-browse {
+    background-color:#991dff;
+}
+.btn-browse:hover {
+    background-color: #333333;
+}
+.btn-recruit {
+    background-color: #333333;
+}
+
+
+.company-opening-section {
+    background-color: #5d1382;
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-theme {
+    color: #0099cc;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #d6d6d6;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the boxes */
+}
+
+.col-md-4 {
+    flex: 0 0 calc(33.33% - 30px); /* Adjust box size and spacing */
+    max-width: calc(33.33% - 30px); /* Adjust box size and spacing */
+    margin: 15px; /* Add spacing between boxes */
+}
+
+.job-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.job-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-name {
+    font-size: 20px; /* Reduce font size for company name */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.job-position {
+    font-size: 16px; /* Reduce font size for job position */
+    color: #888888;
+}
+.featured-jobs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #5d1382;
+    color: #ffffff;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.job-listings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.job-listing {
+    flex: 1;
+    max-width: calc(33.33% - 4rem);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-listing img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+.job-listing img.more-icon {
+    width: 150px; /* Set the width of the icon */
+    height: calc(150px * 9 / 16); /* Calculate the height based on 16:9 aspect ratio */
+    margin-bottom: 1rem;
+}
+.paragraph-black a,
+.paragraph-black a:hover {
+    text-decoration: none; /* Remove underline for the link within the paragraph */
+    color: black; /* Set link text color to black */
+}
+
+.paragraph-black {
+    color: black; /* Set paragraph text color to black */
+}
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem;
+    background-color: #4e196d;
+    color: #fff;
+}
+
+.feature {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
